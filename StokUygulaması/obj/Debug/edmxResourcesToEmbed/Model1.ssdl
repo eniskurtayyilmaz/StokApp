@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StockUygulaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="StokHareket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Girdi" Type="int" />
+    <Property Name="Cıktı" Type="int" />
+  </EntityType>
+  <EntityType Name="StokKartı">
+    <Key>
+      <PropertyRef Name="StokKod" />
+    </Key>
+    <Property Name="StokKod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StokKart" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'StockUygula.dbo.StokHareketEkrani' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="StokHareketEkrani">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Girdi" Type="int" />
+    <Property Name="Cıktı" Type="int" />
+    <Property Name="Sonuc" Type="int" />
+  </EntityType>
+  <Association Name="FK_StokHareket_StokKartı1">
+    <End Role="StokKartı" Type="Self.StokKartı" Multiplicity="1" />
+    <End Role="StokHareket" Type="Self.StokHareket" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="StokKartı">
+        <PropertyRef Name="StokKod" />
+      </Principal>
+      <Dependent Role="StokHareket">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StockUygulaModelStoreContainer">
+    <EntitySet Name="StokHareket" EntityType="Self.StokHareket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StokKartı" EntityType="Self.StokKartı" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StokHareketEkrani" EntityType="Self.StokHareketEkrani" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [StokHareketEkrani].[Id] AS [Id], 
+    [StokHareketEkrani].[Girdi] AS [Girdi], 
+    [StokHareketEkrani].[Cıktı] AS [Cıktı], 
+    [StokHareketEkrani].[Sonuc] AS [Sonuc]
+    FROM [dbo].[StokHareketEkrani] AS [StokHareketEkrani]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_StokHareket_StokKartı1" Association="Self.FK_StokHareket_StokKartı1">
+      <End Role="StokKartı" EntitySet="StokKartı" />
+      <End Role="StokHareket" EntitySet="StokHareket" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\bin\Debug\StokUygulaması.exe.config
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\bin\Debug\StokUygulaması.exe
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\bin\Debug\StokUygulaması.pdb
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\bin\Debug\EntityFramework.dll
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\bin\Debug\EntityFramework.xml
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.csprojAssemblyReference.cache
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.Properties.Resources.resources
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.StokTakip.resources
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.csproj.GenerateResource.cache
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.csproj.CoreCompileInputs.cache
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.csproj.CopyComplete
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.exe
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.pdb
+C:\Users\Ahmet Karadağ\Desktop\StokUygulaması\StokUygulaması\obj\Debug\StokUygulaması.StokKartı.resources
