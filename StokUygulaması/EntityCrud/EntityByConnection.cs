@@ -8,6 +8,7 @@ namespace StokUygulaması.EntityCrud
 {
     public class EntityByConnection
     {
+        //TODO: Singleton Pattern hani nerede?
         public Db Db = new Db();
     }
 }

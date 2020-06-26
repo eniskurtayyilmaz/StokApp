@@ -10,15 +10,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StokUygulaması
-{
+ {
+    //TODO: Tasarım berbat
+    //TODO: Türkçe karakter kullanmamalısın projelerde.
     public partial class StokKartı : Form
     {
+
         public StokKartı()
         {
             InitializeComponent();
         }
         public void BilgiGetir()
         {
+            //Bu kodu (EntityByConnection Connection ) public yap //EntityByAdded.cs satır 11 gibi
             EntityByConnection Connection = new EntityByConnection();
             dataGridView1.DataSource = Connection.Db.StokKartı.ToList();
         }
@@ -42,12 +46,15 @@ namespace StokUygulaması
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            //TODO: Kullanıcı ID'yi nerden bilsin, niye yazsın?! Seç düzenle gibi bir şey yapmak gerekir.
             EntityByUpdated updated = new EntityByUpdated(Convert.ToInt32(txtid.Text), txtUrun.Text);
             BilgiGetir();
         }
 
+        
         private void btnSil_Click(object sender, EventArgs e)
         {
+            //TODO: Kullanıcı ID'yi nerden bilsin, niye yazsın?! Seç düzenle gibi bir şey yapmak gerekir.
             EntityByDeleted deleted = new EntityByDeleted();
             deleted.EntityByDeletedCard(Convert.ToInt32(txtid.Text));
             BilgiGetir();
